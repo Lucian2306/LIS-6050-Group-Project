@@ -20,7 +20,7 @@ def median(numbers):
 def minimumMax(statRange):
     minimum = min(statRange)
     maximum = max(statRange)
-    print(minimum, maximum)
+    print(minimum, maximum)    # switch print to return if needed
     
 
 mean([])    # insert numbers between brackets 
