@@ -16,9 +16,15 @@ def median(numbers):
     numbers.sort()
     mid = len(numbers) // 2
     print((numbers[mid] + numbers[~mid]) / 2)    # switch print to return if needed
+
+def minimumMax(statRange):
+    minimum = min(statRange)
+    maximum = max(statRange)
+    print(minimum, maximum)
     
 
 mean([])    # insert numbers between brackets 
 
 median([])  # insert numbers between brackets
 
+minimumMax([])    # insert numbers between brackets
