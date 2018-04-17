@@ -1,1 +1,15 @@
+# -*- coding: utf-8 -*-
+"""
+Group Project: Cryptocurrency
 
+Created: April 2018
+Authors: Amy Hoffman, Deb Dorsey, J. Lucian Rathbun, Ryan Reed
+Course: LIS 6050 Introduction to Computer Programming 
+University: Wayne State University 
+Python version: 3.6x
+"""
+
+def mean(numbers):
+    print(float(sum(numbers)) / max(len(numbers), 1)) # switch print to return if needed 
+    
+mean([]) #instert numbers between brackets to average
