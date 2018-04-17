@@ -10,6 +10,15 @@ Python version: 3.6x
 """
 
 def mean(numbers):
-    print(float(sum(numbers)) / max(len(numbers), 1)) # switch print to return if needed 
+    print(float(sum(numbers)) / max(len(numbers), 1))    # switch print to return if needed 
+
+def median(numbers):
+    numbers.sort()
+    mid = len(numbers) // 2
+    print((numbers[mid] + numbers[~mid]) / 2)    # switch print to return if needed
     
-mean([]) #instert numbers between brackets to average
+
+mean([])    # insert numbers between brackets 
+
+median([])  # insert numbers between brackets
+
