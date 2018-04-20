@@ -9,22 +9,166 @@ University: Wayne State University
 Python version: 3.6x
 """
 
-def mean(numbers):
-    print(float(sum(numbers)) / max(len(numbers), 1))    # switch print to return if needed 
+'''ANALYSIS MODULE'''
 
-def median(numbers):
-    numbers.sort()
-    mid = len(numbers) // 2
-    print((numbers[mid] + numbers[~mid]) / 2)    # switch print to return if needed
+'''This is going to be the analysis module for the cryptodesk program, functions
+included are mean, median, minimum, maximum, and return all curriencies with 
+values above/below/in a range for a given data point. User will be able to 
+choose which currency/ies they want to examine and which data fields. 
+These should be passed as arguments of the functions. Output will be nicely 
+formatted strings that make it clear which currencies were chosen, and what the
+ statistic refers to.
+Ex: The average price for [insert currencies here] is: '''
 
-def minimumMax(statRange):
-    minimum = min(statRange)
-    maximum = max(statRange)
-    print(minimum, maximum)    # switch print to return if needed
-    
+import statistics as stat
+#won't need to use the api in the module itself later, just here for now
+#for testing
+import requests
 
-mean([])    # insert numbers between brackets 
+response = requests.get('https://api.coinmarketcap.com/v1/ticker/?limit=0')
 
-median([])  # insert numbers between brackets
+cmcData = response.json()
 
-minimumMax([])    # insert numbers between brackets
+'''WORKS BUT NEEDS PRETTYING UP'''
+def summary(datalist, currencylist):
+    cList = []
+    for i in currencylist:
+        currency = i.lower().strip()
+        cList.append(currency)
+    for i in datalist:
+        sName = i["name"].lower().strip()
+        for c in cList:
+            if c == sName:
+                print(i)
+            else:
+                pass
+                
+
+''' WORKS BUT NEEDS PRETTYING UP'''
+def average(datalist, currencylist, field):
+    # create empty list for data to be put into
+    cList = []
+    vList = []
+    for i in currencylist:
+        currency = i.lower().strip()
+        cList.append(currency)
+    for c in cList:
+        for n in datalist:
+            if c == n["name"].lower().strip():
+                fValue = float(n[field])
+                vList.append(fValue)
+            else:
+                pass
+    aValue = stat.mean(vList)
+    print("The average", field, "value is:", aValue)
+    #need to make currencylist a string
+
+
+'''WORKS BUT NEEDS PRETTYING'''   
+def med(datalist, currencylist, field):
+    # create empty list for data to be put into
+    cList = []
+    vList = []
+    for i in currencylist:
+        currency = i.lower().strip()
+        cList.append(currency)
+    for c in cList:
+        for n in datalist:
+            if c == n["name"].lower().strip():
+                fValue = float(n[field])
+                vList.append(fValue)
+            else:
+                pass
+    medValue = stat.median(vList)
+    print("The median {field} value for {currencylist} is:", medValue)
+    #need to make currencylist a string
+
+'''WORKS BUT NEEDS PRETTYING'''    
+def minimum(datalist, currencylist, field):
+    # create empty list for data to be put into
+    cList = []
+    vList = []
+    for i in currencylist:
+        currency = i.lower().strip()
+        cList.append(currency)
+    for c in cList:
+        for n in datalist:
+            if c == n["name"].lower().strip():
+                fValue = float(n[field])
+                vList.append(fValue)
+            else:
+                pass
+    minValue = min(vList)
+    print("The minimum {field} value for {currencylist} is:", minValue)
+    #need to make currencylist a string
+  
+'''WORKS BUT NEEDS PRETTYING'''
+def maximum(datalist, currencylist, field):
+    # create empty list for data to be put into
+    cList = []
+    vList = []
+    for i in currencylist:
+        currency = i.lower().strip()
+        cList.append(currency)
+    for c in cList:
+        for n in datalist:
+            if c == n["name"].lower().strip():
+                fValue = float(n[field])
+                vList.append(fValue)
+            else:
+                pass
+    maxValue = max(vList)
+    print("The maximum {field} value for {currencylist} is:", maxValue)
+    #need to make currencylist a string'''
+
+'''HAVING TROUBLE WITH GETTING THE FIELD VALUE INTO A FLOAT. IF I OUTPUT THE
+TYPE OF THE FIELD IT TELLS ME STRING, BUT WHEN I TRY TO CONVERT TO FLOAT, 
+IT GIVES A TYPEERROR: FLOAT() ARGUMENT MUST BE A STRING OR NUMBER, NOT NONETYPE'''  
+def above(datalist, field, threshold): # threshold is INCLUSIVE
+    tVal = float(threshold)
+    for f in datalist:
+        compField = float(f[field])
+        if compField >= tVal:
+            print(f["name"])
+    #make sure cList comes out as strings'''
+   
+'''HAVEN'T TESTED, BUT PROBABLY SAME PROBLEM AS ABOVE'''
+def below(datalist, field, threshold): #threshold is INCLUSIVE
+    cList = []
+    for i in datalist:
+        fValue = float(i[field])
+        if fValue <= threshold:
+            cList.append(i['name'])
+        else:
+            pass
+    print("The currencies with {field} values of {threshold} and below are: "
+          + cList)
+    #make sure cList comes out as strings
+
+'''HAVEN'T TESTED, BUT PROBABLY SAME PROBLEM AS ABOVE'''    
+def between(datalist, field, vRange): 
+    #rValues represents the range, will be a 2 item list or a tuple
+    cList = []
+    splitRange = vRange.split("-")
+    rangeList = []
+    for i in splitRange:
+        rangeList.append(int(i))
+    for i in datalist:
+        lowEnd = float(rangeList[0])
+        highEnd = float(rangeList[1])
+        fValue = float(i[field])
+        if lowEnd < fValue < highEnd:
+            cList.append(i['name'])
+        else:
+            pass
+    print("The currencies with {field} values between {lowEnd} and {highEnd} \
+        are: " + cList)
+    #make sure cList comes out as strings
+
+'''function calls below are commented out, but feel free to use them to test'''    
+#summary(cmcData, ["Aeternity", "0x"])
+#average(cmcData, ["bitcoin", "qtum"], "price_usd")
+#med(cmcData, ["bitcoin", "qtum", "aeternity", "0x"], "price_usd")
+#minimum(cmcData, ["bitcoin", "qtum", "aeternity", "0x"], "price_usd") 
+#maximum(cmcData, ["bitcoin", "qtum", "aeternity", "0x"], "price_usd")   
+
