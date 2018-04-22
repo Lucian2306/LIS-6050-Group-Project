@@ -1,0 +1,61 @@
+# -*- coding: utf-8 -*-
+"""
+Group Project: Cryptocurrency
+
+Created: April 2018
+Authors: Amy Hoffman, Deb Dorsey, J. Lucian Rathbun, Ryan Reed
+Course: LIS 6050 Introduction to Computer Programming 
+University: Wayne State University 
+Python version: 3.6x
+"""
+
+from urllib.request import urlopen
+from bs4 import BeautifulSoup
+import webbrowser 
+import time
+
+def sleep(amount=1):
+    time.sleep(amount)
+
+################# FAQ OPTION STARTS HERE#####################
+
+##User asked what they would like review frequently asked questions
+#User is redirected and shown frequently asked questions.
+#Create user def faq()
+
+
+#Define variables
+faqPage = ('https://coinmarketcap.com/faq/')
+
+#Open webpage
+cryptoPage = urlopen(faqPage)
+
+#Parsing the HTML
+soup = BeautifulSoup(cryptoPage.read(), 'html.parser')
+#print(soup)
+
+#Search for HTML elements
+#questions = soup.find(class_='faq-row').text
+#print(questions)
+
+questions = soup.find_all(class_='faq-row')
+print(questions)
+
+
+
+################# QUIT OPTION STARTS HERE#####################
+
+
+#User is given choice to via  'q'  or 'quit' input.
+#qChoice = input('If you would like to our leave our site, please type q or quit: ')
+#
+#if (qChoice == 'q') or (qChoice == 'quit'):
+#    print('Thank you for visiting Cryptocurrency Info Desk.')
+#    #A short sleep pause to to allow time to read the thank message and
+#    #soften the webpage opening
+#    sleep(1)
+#    #user redirected to Crypocurrency News Website)
+#    webbrowser.open('https://www.coindesk.com/')
+#
+#else: # error mmessage is given for incorrect input
+#    print('Sorry, that answer was not found, please choose again')
