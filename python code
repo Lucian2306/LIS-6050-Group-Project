@@ -8,23 +8,94 @@ Course: LIS 6050 Introduction to Computer Programming
 University: Wayne State University 
 Python version: 3.6x
 """
+# import analysis module
+import requests
 
-def mean(numbers):
-    print(float(sum(numbers)) / max(len(numbers), 1))    # switch print to return if needed 
+response = requests.get('https://api.coinmarketcap.com/v1/ticker/?limit=0')
+cmcData = response.json()
 
-def median(numbers):
-    numbers.sort()
-    mid = len(numbers) // 2
-    print((numbers[mid] + numbers[~mid]) / 2)    # switch print to return if needed
+'''GETTING USER INPUT'''
+# cType can refer to options as well as inputting currency, field, range/value.
+#  It should probably stick to an official list to make looping/ reading code 
+# easier
+# cType argument in this case should be a string. If this is confusing we can
+# change the argument name
+def ask(cType): 
+    choiceList = []
+    print('Please enter your chosen', cType + ". If you are inputting", 
+                   "multiple values, enter them all at once using a comma to",
+                   "separate values.")
+    choice = input("Enter values here: ")
+    splitChoice = choice.split(", ")
+    for i in splitChoice:
+        choiceList.append(i.lower().strip())
+    return choiceList
 
-def minimumMax(statRange):
-    minimum = min(statRange)
-    maximum = max(statRange)
-    print(minimum, maximum)    # switch print to return if needed
-    
 
-mean([])    # insert numbers between brackets 
+'''CHECKING USER INPUT AGAINST VALID VALUES'''
+# check that input is valid. variable refers to the variable assigned 
+# to ask() call. cType refers to choice type: options, field, currency, or 
+# "number".
+# If the cType argument is "number", it will test by first separating whatever 
+# the input was into a list of values. Then for each value it will try to 
+# convert it to a float. If it doesn't work, print message to try again.
+# If cType is not number, look for the variable value in the cType's list.
+# If not found, print message to try again.
+def check(variable, cType):
+    if cType == "number":
+        for i in variable:
+            i = i.split("-")
+            for v in i:
+                print(v)
+                try:
+                    float(v)
+                    print("input ok") #this is just for testing
+                except:
+                    print("Hey!", v, "doesn't appear to be a number. Try again.")
+    else:
+         for i in variable:
+            if i not in cType:
+                 print("Sorry, there is no information for", i +
+                       ". Please try again.")
+                 '''REDIRECT USER TO ENTER AGAIN, USE LOOP'''
+            else:
+                print("input ok") #this is just for testing
+                return False
+            '''return false meant to be used in a 'while True:' loop, but the value
+            returned can be changed to suit whatever the loop's exit condition is'''
+            
+'''CREATE CHOICE TYPE LISTS FROM API SCRAPE'''
+# create the list of currency names to check input against
+# iterate through the list of data, and for each dictionary inside the list,
+# get data for the field name passed, and add to list of values.  Field argument
+# must be a string, datalist will be whatever variable the datalist was assigned. 
+def getValues(datalist, field):
+    vList = []
+    for i in datalist:
+        val = i[field].lower().strip()
+        vList.append(val)
+    return vList
 
-median([])  # insert numbers between brackets
+# used to create the list of field names to check input against
+# can also use to output with instructions or help
+# Assume that each dictionary in the datalist has the same keys.
+# Only the first dictionary is used in this case.
+# Iterate through that dictionary and add the keys (not their values) to the
+# list of keys
+def getKeys(datalist):
+    keyList = []
+    for key in datalist[0]:
+        keyList.append(key)
+    return keyList
 
-minimumMax([])    # insert numbers between brackets
+# following variables are choice types           
+option = ["summary", "average", "median", "min", "max", "above", "below", 
+              "between", "faq", "quit"]
+currency = getValues(cmcData, "name")
+field = getKeys(cmcData)
+     
+#code below for demonstration/testing, should be removed before turning in   
+currChoice = ask("currency")
+check(currChoice, currency)
+fChoice = ask("field")
+check(fChoice, field)
