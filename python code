@@ -16,8 +16,28 @@ import time
 
 def sleep(amount=1):
     time.sleep(amount)
+    
 
-################# FAQ OPTION STARTS HERE#####################
+
+# ATTN GROUP: this is the code that I wrote to parse the FAQ data.
+# Let me know what you think --Lucian
+
+def FAQ():
+    webSite = ('https://coinmarketcap.com/faq/')
+    
+    page = urlopen(webSite)
+
+    soup = BeautifulSoup(page.read(), 'html.parser')
+
+    results = soup.find(class_=' col-md-12 col-sm-12')
+    print(results.get_text())
+    
+FAQ() 
+
+
+
+# Deb's code
+#################FAQ OPTION STARTS HERE#####################
 
 ##User asked what they would like review frequently asked questions
 #User is redirected and shown frequently asked questions.
@@ -43,6 +63,7 @@ print(questions)
 
 
 
+# Deb's code
 ################# QUIT OPTION STARTS HERE#####################
 
 
