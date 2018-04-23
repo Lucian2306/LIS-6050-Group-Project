@@ -56,7 +56,7 @@ def userGuide():
           "(highest CC value), 'below' "
           "(CCs with values below your CC of interest), 'above' "
           "(CCs with values above your CC of interst), and 'between' "
-          "(which produces a range-value between your CC choice #1 and your CC "
+          "(which produces a range-value between your CC choice #1 and your CC"
           " choice #2).")
     print("*" * 85)
           
