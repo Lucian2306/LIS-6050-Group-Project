@@ -47,6 +47,31 @@ FAQ()
 #Define variables
 faqPage = ('https://coinmarketcap.com/faq/')
 
+print("*" * 85)
+print("DEFINITIONS")
+print("\nMARKET CAPITALIZATION:")
+print("\t* a way of ranking the relative size of a CC.")
+print("\t* calculated by multiplying the Price by the Circulating Supply.")
+print("\nPRICE CALCULATION:")
+print("\t* volume weighted average of all prices reported at each market.")
+print("\nCIRCULATION SUPPLY:")
+print("\t* approximate number of coins currently circulating")
+print("\nTOTAL SUPPLY:")
+print("\t* total amount of coins currently in existence")
+print("\nMAX SUPPLY:")
+print("\t* max amount of coins expected ever to exist in the CC.")
+print("\nCOIN:")
+print("\t* a CC that can operate independently.")
+print("\nTOKEN:")
+print("\t* a CC that depends on another as a platform to operate.")
+print("\nFOR MORE INFO VISIT: https://coinmarketcap.com/faq/")
+print("*" * 85)
+
+#created the above explanation of definitons -- Ryan
+
+
+
+
 #Open webpage
 cryptoPage = urlopen(faqPage)
 
