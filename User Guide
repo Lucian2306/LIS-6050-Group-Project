@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Group Project: Cryptocurrency InfoDesk
-Aspect: User Guide
+Aspect: User Guide + Cryptocurrency Definitions
 
 Created: April 2018
 Authors: Amy Hoffman, Deb Dorsey, J. Lucian Rathbun, Ryan Reed
@@ -48,6 +48,13 @@ def userGuide():
     print("\nFirst, the user must choose a CC or CCs that interest them. "
           "A list of CCs will be provided.")
     sleep(2)
+    print("\nSummary: type the letter 'c' or the word 'currency'")
+    print("\nA summary report will include all current information about a "
+          + "particular CC, including name, stock symbol, CC rank, USD price, "
+          + "price vs Bitcoin, 24-hour volume of CC in USD, the market cap in "
+          + "USD, the available supply, the total supply, the max supply, "
+          + "the hourly percent change, the 24-hour percent change, the "
+          + "weekly percent change, and the time of last update.")
     print("\nStatistics: type the letter 'a' or the word 'analysis'")
     print("\nVarious statistical analyses can be calculated between CCs, "
           "including 'mean' (average CC value), 'median' "
