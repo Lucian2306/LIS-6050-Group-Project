@@ -31,8 +31,8 @@ print("\nTheoretically, cryptocurrency is more secure than any other type of"
       "becoming an investor.")
 sleep(2)
 print("\n\tThe Program:")
-print("\nThis program will enable users to pull data about cryptocurrency"
-      "values and manipulate that data in meaningful ways. Data can simply be"
+print("\nThis program enable users to pull data about cryptocurrency"
+      "values and manipulate that data in meaningful ways. Data can be simply"
       "viewed or it can be saved to a file.")
 print("\nFrom this point forward, cryptocurrency will be abbreviated as such:")
 print("\n\tCC = cryptocurrency")
