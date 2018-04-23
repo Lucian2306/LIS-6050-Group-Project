@@ -12,6 +12,12 @@ Python version: 3.6x
 
 # this is the user guide, so far; it's not finished yet. --Lucian
 # I reduced this by about 20 lines of code with affecting the wording or formatting. -- Ryan
+# I added a timer to it because it's such a big chunk of info. I thought it would be better to break it up. -- Ryan
+
+import time
+
+def sleep(amount=1):
+    time.sleep(amount)
 
 print("*" * 85) 
 print("Cryptocurrency InfoDesk: a user guide")
@@ -23,6 +29,7 @@ print("\nTheoretically, cryptocurrency is more secure than any other type of"
       "currency--a premise that is based on Blockchain. Please familiarize "
       "yourself with Blockchain (www.blockchain.com) and Cryptography before "
       "becoming an investor.")
+sleep(2)
 print("\n\tThe Program:")
 print("\nThis program will enable users to pull data about cryptocurrency"
       "values and manipulate that data in meaningful ways. Data can simply be"
@@ -30,8 +37,9 @@ print("\nThis program will enable users to pull data about cryptocurrency"
 print("\nFrom this point forward, cryptocurrency will be abbreviated as such:")
 print("\n\tCC = cryptocurrency")
 print("\tCCs = cryptocurrencies")
-print("\nFirst, the user must choose a CC or CCs that interest them. A list"
+print("\nFirst, the user must choose a CC or CCs that interest them. A list "
       "of CCs will be provided.")
+sleep(2)
 print("\nStatistics: type the letter 'a' or the word 'analysis'")
 print("\nVarious statistical analyses can be calculated between CCs,"
       "including 'mean' (average CC value), 'median' (half of the CC values"
@@ -40,7 +48,8 @@ print("\nVarious statistical analyses can be calculated between CCs,"
       "(CCs with values below your CC of interest), 'above'"
       "(CCs with values above your CC of interst), and 'between'"
       "(which produces a range value between your CC choice #1 and your CC"
-      "choice #2).") 
+      "choice #2).")
+sleep(2)
 print("\nFrequently Asked Questions: type the letter 'f' or the abbreviation"
       "'faq'")
 print("\nFAQs about CCs include 'what is Market Capitalization and how is it"
