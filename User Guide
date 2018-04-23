@@ -22,17 +22,17 @@ def sleep(amount=1):
 print("*" * 85) 
 print("Cryptocurrency InfoDesk: a user guide")
 print("\n\tIMPORTANT! READ FIRST: ")
-print("\nThis program was written for cryptocurrency enthusiasts."
-      "The program writers do not endorse cryptocurrency investments." 
+print("\nThis program was written for cryptocurrency enthusiasts. "
+      "The program writers do not endorse cryptocurrency investments. " 
       "Never invest more than you are willing to lose.")
-print("\nTheoretically, cryptocurrency is more secure than any other type of"
+print("\nTheoretically, cryptocurrency is more secure than any other type of "
       "currency--a premise that is based on Blockchain. Please familiarize "
       "yourself with Blockchain (www.blockchain.com) and Cryptography before "
       "becoming an investor.")
 sleep(2)
 print("\n\tThe Program:")
-print("\nThis program enables users to pull data about cryptocurrency"
-      "values and manipulate that data in meaningful ways. Data can be simply"
+print("\nThis program enables users to pull data about cryptocurrency "
+      "values and manipulate that data in meaningful ways. Data can simply be "
       "viewed or it can be saved to a file.")
 print("\nFrom this point forward, cryptocurrency will be abbreviated as such:")
 print("\n\tCC = cryptocurrency")
@@ -41,19 +41,19 @@ print("\nFirst, the user must choose a CC or CCs that interest them. A list "
       "of CCs will be provided.")
 sleep(2)
 print("\nStatistics: type the letter 'a' or the word 'analysis'")
-print("\nVarious statistical analyses can be calculated between CCs,"
-      "including 'mean' (average CC value), 'median' (half of the CC values"
-      "are above the median CC and half are below it), 'minimum'"
-      "(lowest CC value), 'maximum'(highest CC value), 'below'"
-      "(CCs with values below your CC of interest), 'above'"
-      "(CCs with values above your CC of interst), and 'between'"
-      "(which produces a range-value between your CC choice #1 and your CC"
+print("\nVarious statistical analyses can be calculated between CCs, "
+      "including 'mean' (average CC value), 'median' (half of the CC values "
+      "are above the median CC and half are below it), 'minimum' "
+      "(lowest CC value), 'maximum' (highest CC value), 'below' "
+      "(CCs with values below your CC of interest), 'above' "
+      "(CCs with values above your CC of interst), and 'between' "
+      "(which produces a range-value between your CC choice #1 and your CC "
       "choice #2).")
 sleep(2)
-print("\nFrequently Asked Questions: type the letter 'f' or the abbreviation"
+print("\nFrequently Asked Questions: type the letter 'f' or the abbreviation "
       "'faq'")
-print("\nFAQs about CCs include 'what is Market Capitalization and how is it"
-      "calculated?'; 'what is the difference between a coin and a token?'"
+print("\nFAQs about CCs include 'what is Market Capitalization and how is it "
+      "calculated?'; 'what is the difference between a coin and a token?' "
       "etc.")
 print("\nThis concludes the user guide for the Cryptocurrency InfoDesk.")
 print("\nThank you for your interest in our program.") 
