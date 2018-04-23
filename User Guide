@@ -31,7 +31,7 @@ print("\nTheoretically, cryptocurrency is more secure than any other type of"
       "becoming an investor.")
 sleep(2)
 print("\n\tThe Program:")
-print("\nThis program enable users to pull data about cryptocurrency"
+print("\nThis program enables users to pull data about cryptocurrency"
       "values and manipulate that data in meaningful ways. Data can be simply"
       "viewed or it can be saved to a file.")
 print("\nFrom this point forward, cryptocurrency will be abbreviated as such:")
@@ -47,7 +47,7 @@ print("\nVarious statistical analyses can be calculated between CCs,"
       "(lowest CC value), 'maximum'(highest CC value), 'below'"
       "(CCs with values below your CC of interest), 'above'"
       "(CCs with values above your CC of interst), and 'between'"
-      "(which produces a range value between your CC choice #1 and your CC"
+      "(which produces a range-value between your CC choice #1 and your CC"
       "choice #2).")
 sleep(2)
 print("\nFrequently Asked Questions: type the letter 'f' or the abbreviation"
