@@ -70,7 +70,7 @@ import time
 def sleep(amount=1):
     time.sleep(amount)
 
-def userguide():
+def userGuide():
 
     print("*" * 85) 
     print("Cryptocurrency InfoDesk: a user guide")
@@ -80,12 +80,12 @@ def userguide():
           "Never invest more than you are willing to lose.")
     print("\nTheoretically, cryptocurrency is more secure than any other type "
           "of currency--a premise that is based on Blockchain. "
-          "Please familiarize yourself with Blockchain (www.blockchain.com)"
+          "Please familiarize yourself with Blockchain (www.blockchain.com) "
           "and Cryptography before becoming an investor.")
     sleep(2)
     print("\n\tThe Program:")
     print("\nThis program enables users to pull data about cryptocurrency "
-          "values and manipulate that data in meaningful ways."
+          "values and manipulate that data in meaningful ways. "
           "Data can simply be viewed or it can be saved to a file.")
     print("\nFrom this point forward, cryptocurrency will be abbreviated "
           "as such:")
@@ -102,7 +102,7 @@ def userguide():
           "(highest CC value), 'below' "
           "(CCs with values below your CC of interest), 'above' "
           "(CCs with values above your CC of interst), and 'between' "
-          "(which produces a range-value between your CC choice #1 and your CC"
+          "(which produces a range-value between your CC choice #1 and your CC "
           " choice #2).")
     print("*" * 85)
           
@@ -131,8 +131,8 @@ print("FREQUENTLY ASKED QUESTIONS")
 print("\t1. User Guide")
 print("\t2. Definitions")    
 
-helpme = input("What would you like to see? ")
-if helpme == "1":
-    userguide()
-elif helpme == "2":
+helpMe = input("What would you like to see? ")
+if helpMe == "1":
+    userGuide()
+elif helpMe == "2":
     definitions()
