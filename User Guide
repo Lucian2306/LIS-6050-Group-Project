@@ -11,52 +11,41 @@ Python version: 3.6x
 """
 
 # this is the user guide, so far; it's not finished yet. --Lucian
+# I reduced this by about 20 lines of code with affecting the wording or formatting. -- Ryan
 
 print("*" * 85) 
-print("")
 print("Cryptocurrency InfoDesk: a user guide")
-print("")
-print("IMPORTANT! READ FIRST: ")
-print("")
-print("This program was written for cryptocurrency enthusiasts. The program " 
-+ "writers do not endorse cryptocurrency investments. Never invest more than "
-+ "you are willing to lose.")
-print("")
-print("Theoretically, cryptocurrency is more secure than any other type of "
-+ "currency--a premise that is based on Blockchain. Please familiarize "
-+ "yourself with Blockchain and Cryptography before becoming an investor.")
-print("")
-print("The Program:")
-print("")
-print("This program will enable users to pull data about cryptocurrency " 
-+ "values and manipulate that data in meaningful ways. Data can simply be "
-+ "viewed or it can be saved to a file.")
-print("")
-print("From this point forward, cryptocurrency will be abbreviated as such:")
-print("")
-print("CC = cryptocurrency")
-print("CCs = cryptocurrencies")
-print("")
-print("First, the user must choose a CC or CCs that interest them. A list of "
-+ "CCs will be provided.")
-print("")
-print("Statistics: type the letter 'a' or the word 'analysis'")
-print("")
-print("Various statistical analyses can be calculated between CCs, including "
-+ "'mean' (average CC value), 'median' (half of the CC values are above the "
-+ "median CC and half are below it), 'minimum' (lowest CC value), 'maximum' "
-+ "(highest CC value), 'below' (CCs with values below your CC of interest), "
-+ "'above' (CCs with values above your CC of interst), and 'between' (which " 
-+ "produces a range value between your CC choice #1 and your CC choice #2).") 
-print("")
-print("Frequently Asked Questions: type the letter 'f' or the abbreviation "
-+ "'faq'")
-print("")
-print("FAQs about CCs include 'what is Market Capitalization and how is it "
-+ "calculated?'; 'what is the difference between a coin and a token?' etc.")
-print("")
-print("This concludes the user guide for the Cryptocurrency InfoDesk.")
-print("")
-print("Thank you for your interest in our program.") 
-print("")
+print("\n\tIMPORTANT! READ FIRST: ")
+print("\nThis program was written for cryptocurrency enthusiasts."
+      "The program writers do not endorse cryptocurrency investments." 
+      "Never invest more than you are willing to lose.")
+print("\nTheoretically, cryptocurrency is more secure than any other type of"
+      "currency--a premise that is based on Blockchain. Please familiarize "
+      "yourself with Blockchain (www.blockchain.com) and Cryptography before "
+      "becoming an investor.")
+print("\n\tThe Program:")
+print("\nThis program will enable users to pull data about cryptocurrency"
+      "values and manipulate that data in meaningful ways. Data can simply be"
+      "viewed or it can be saved to a file.")
+print("\nFrom this point forward, cryptocurrency will be abbreviated as such:")
+print("\n\tCC = cryptocurrency")
+print("\tCCs = cryptocurrencies")
+print("\nFirst, the user must choose a CC or CCs that interest them. A list"
+      "of CCs will be provided.")
+print("\nStatistics: type the letter 'a' or the word 'analysis'")
+print("\nVarious statistical analyses can be calculated between CCs,"
+      "including 'mean' (average CC value), 'median' (half of the CC values"
+      "are above the median CC and half are below it), 'minimum'"
+      "(lowest CC value), 'maximum'(highest CC value), 'below'"
+      "(CCs with values below your CC of interest), 'above'"
+      "(CCs with values above your CC of interst), and 'between'"
+      "(which produces a range value between your CC choice #1 and your CC"
+      "choice #2).") 
+print("\nFrequently Asked Questions: type the letter 'f' or the abbreviation"
+      "'faq'")
+print("\nFAQs about CCs include 'what is Market Capitalization and how is it"
+      "calculated?'; 'what is the difference between a coin and a token?'"
+      "etc.")
+print("\nThis concludes the user guide for the Cryptocurrency InfoDesk.")
+print("\nThank you for your interest in our program.") 
 print("*" * 85) 
