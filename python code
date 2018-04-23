@@ -124,15 +124,16 @@ print(questions)
 
 
 #User is given choice to via  'q'  or 'quit' input.
-#qChoice = input('If you would like to our leave our site, please type q or quit: ')
-#
-#if (qChoice == 'q') or (qChoice == 'quit'):
-#    print('Thank you for visiting Cryptocurrency Info Desk.')
-#    #A short sleep pause to to allow time to read the thank message and
-#    #soften the webpage opening
-#    sleep(1)
-#    #user redirected to Crypocurrency News Website)
-#    webbrowser.open('https://www.coindesk.com/')
-#
-#else: # error mmessage is given for incorrect input
-#    print('Sorry, that answer was not found, please choose again')
+qChoice = input("Leave this site and connect with cryptocurrency news,\n\
+                type ‘q’ or ‘quit’: ")
+if (qChoice == 'q') or (qChoice == 'quit'):
+    
+    print('Thank you for visiting Cryptocurrency Info Desk.')
+        #A short sleep pause to to allow time to read the thank message and
+        #soften the webpage opening
+    sleep(1)
+        #user redirected to Crypocurrency News Website)
+    webbrowser.open('https://www.coindesk.com/')
+
+else: # error mmessage is given for incorrect input
+        print('Sorry, that answer was not found, please choose again')
