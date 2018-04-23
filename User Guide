@@ -85,9 +85,12 @@ print("FREQUENTLY ASKED QUESTIONS")
 print("\t1. User Guide")
 print("\t2. Definitions")    
 
-helpMe = input("What would you like to see? Type '1' for the User "
-+ "Guide or '2' for Definitions: ")
-if helpMe == "1":
-    userGuide()
-elif helpMe == "2":
-    definitions()
+def main():
+    helpMe = input("What would you like to see? Type '1' for the User "
+                   + "Guide or '2' for Definitions: ")
+    if helpMe == "1":
+        userGuide()
+    elif helpMe == "2":
+        definitions()
+        
+main()
