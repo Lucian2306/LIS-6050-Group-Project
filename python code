@@ -25,28 +25,26 @@ def sleep(amount=1):
 
 #############################################################################
 #This paragraph provides the user with general information about the site
-print('      Welcome to Cryptocurrency InfoDesk. The interest in cryptocurrency is\n\
-      slowly gaining acceptance and popularity among investors. These investors\n\
-      have many questions about different coins and how well they perform in\n\
-      the cryptocurrency market. This site offers several convenient resources\n\
-      that will enable an investor to become informed about the market position\n\
-      of cryptocurrencies.  Tools within the site allow users to search for a\n\
-      specific or range of currency prices and conduct different market analysis\n\
-      of currencies across various aspects, such as, the circulating supply of a\n\
-      particular coin or token. For more information, users can choose to\n\
-      read the frequently asked question section and be connected to an external\n\
-      cryptocurrency news upon leaving the site.')
-print()
-
-print('      To get started, your options are:')
-print()
-print("\t1. Search a particular cryptocurrency price, type 'c' or 'currency'\n\
-      \t2. Review a particular price range of cryptocurrencies, type ‘r’ or ’range’\n\
-      \t3. View an analysis of a chosen group of cryptocurrencies, type, ‘a’ or ‘analysis’\n\
-      \t4. Review frequently Asked Questions, type ‘f’ or ‘faq’\n\
-      \t5. Leave this site and connect with cryptocurrency news, type ‘q’ or ‘quit’")
-print()
-optChoice=('      Please enter your choice: ')
+print("\n\tWelcome to Cryptocurrency InfoDesk." 
+      "\nThe interest in cryptocurrency is "
+      "slowly gaining acceptance and popularity among investors. " 
+      "These investors have many questions about different coins and how well "
+      "they perform in the cryptocurrency market. This site offers several " 
+      "convenient resources that will enable an investor to become informed "
+      "about the market position of cryptocurrencies.  Tools within the site "
+      "allow users to search for a specific or range of currency prices and "
+      "conduct different market analysis of currencies across various aspects," 
+      " such as, the circulating supply of a particular coin or token. "
+      "For more information, users can choose to read the frequently " 
+      "asked question section and be connected to an external cryptocurrency " 
+      "news upon leaving the site.")
+print("\nTo get started, your options are:")
+print("\n1. Search a particular cryptocurrency price"
+      "\n2. Review a particular price range of cryptocurrencies"
+      "\n3. View an analysis of a chosen group of cryptocurrencies"
+      "\n4. Review frequently Asked Questions"
+      "\n5. Leave this site and connect with cryptocurrency news")
+optChoice=("\nPlease enter your choice: ")
 print(optChoice)
 ###################################################################################################
 
