@@ -65,13 +65,8 @@ FAQ()
 
 
 
-# Deb's code
+
 #################FAQ OPTION STARTS HERE#####################
-
-##User asked what they would like review frequently asked questions
-#User is redirected and shown frequently asked questions.
-#Create user def faq()
-
 
 #Define variables
 faqPage = ('https://coinmarketcap.com/faq/')
@@ -99,39 +94,24 @@ print("*" * 85)
 #created the above explanation of definitons -- Ryan
 
 
-
-
-#Open webpage
-cryptoPage = urlopen(faqPage)
-
-#Parsing the HTML
-soup = BeautifulSoup(cryptoPage.read(), 'html.parser')
-#print(soup)
-
-#Search for HTML elements
-#questions = soup.find(class_='faq-row').text
-#print(questions)
-
-questions = soup.find_all(class_='faq-row')
-print(questions)
-
-
-
 # Deb's code
 ################# QUIT OPTION STARTS HERE#####################
 
+import webbrowser 
+import time
 
-#User is given choice to via  'q'  or 'quit' input.
-qChoice = input("Leave this site and connect with cryptocurrency news,\n\
-                type ‘q’ or ‘quit’: ")
-if (qChoice == 'q') or (qChoice == 'quit'):
+def sleep(amount=1):
+    time.sleep(amount)
     
-    print('Thank you for visiting Cryptocurrency Info Desk.')
-        #A short sleep pause to to allow time to read the thank message and
-        #soften the webpage opening
-    sleep(1)
-        #user redirected to Crypocurrency News Website)
+def qOpt():
+    #A printed thank you message is presented to the user.
+    print('Thank you for visiting the Cryptocurrency Info Desk.\n')
+    print('We hope the site was helpful.')
+   
+   #A two second pause is inserted to allow users time to read the statement.
+    sleep(5)
+   
+   #User is redirected to an external cryptocurrency news site.
     webbrowser.open('https://www.coindesk.com/')
 
-else: # error mmessage is given for incorrect input
-        print('Sorry, that answer was not found, please choose again')
+qOpt()
